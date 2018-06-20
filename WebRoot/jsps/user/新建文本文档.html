@@ -1,0 +1,100 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>注册页面</title>
+    
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<link rel="stylesheet" type="text/css" href="../css/user/regist.css" >
+	
+  </head>
+  
+  <body>
+  	<div id="divMain">
+  		<div id="divTitle">
+  			<span id="spanTitle">新用户注册</span>
+  		</div>
+  		<div id="divBody">
+  			<table id="tableForm">
+  				<tr>
+  					<td class="tdText">用户名：</td>
+  					<td class="tdInput">
+  						<input class="inputclass" type="text" name="loginname" id="loginname"/>
+  					</td>
+  					<td class="tdError">
+  						<label>用户名不能为空！</label>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td>登录密码：</td>
+  					<td>
+  						<input type="password" name="loginpass" id="loginpass" />
+  					</td>
+  					<td>
+  						<label></label>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td>确认密码：</td>
+  					<td>
+  						<input type="password" name="reloginpass" id="reloginpass" />
+  					</td>
+  					<td>
+  						<label></label>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td>Email：</td>
+  					<td>
+  						<input type="text" name="email" id="email" />
+  					</td>
+  					<td>
+  						<label></label>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td>图形验证码：</td>
+  					<td>
+  						<input type="text" name="verifyCode" id="verifyCode" />
+  					</td>
+  					<td>
+  						<label></label>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td></td>
+  					<td>
+  						<div><img src="" /></div>
+  					</td>
+  					<td>
+  						<a href="">换一张</a>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td></td>
+  					<td>
+  						<input type="image" src="<c:url value='/images/regist1.jpg' />" id="submitBtn"/>
+  					</td>
+  					<td>
+  						<label></label>
+  					</td>
+  				</tr>
+  			</table>
+  		</div>
+  	</div>
+  </body>
+</html>
